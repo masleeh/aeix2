@@ -1,5 +1,7 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
+import ArrowIcon from "@/assets/icons/arrow_click_icon.svg";
+import RocketIcon from '@/assets/icons/rocket_icon.svg';
 
 const Description = () => {
     return (
@@ -14,15 +16,16 @@ const Description = () => {
             </p>
 
             <div className='desc-block'>
-                <img src="/icons/arrow_click_icon.svg" alt="" className='desc-block-img' width={48} height={48}/>
+                <Image src={ArrowIcon} alt="" className='desc-block-img' />
                 <h4 className='desc-block-title'>Doesn’t require internet connection</h4>
             </div>
 
             <div className='desc-block'>
-                <Image src="/icons/rocket_icon.svg" alt="" className='desc-block-img' width={48} height={48}/>
+                <Image src={RocketIcon} alt="" className='desc-block-img' />
                 <h4 className='desc-block-title'>Easier to use</h4>
             </div>
 
+            
         </section>
     )
 }

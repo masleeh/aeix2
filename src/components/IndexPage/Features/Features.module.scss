@@ -1,9 +1,13 @@
-.pict {
-    margin-top: 80px;
+.feat {
+    margin-top: 44px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &-btn {
+        margin-top: 40px;
+    }
 
     &-title {
         font-size: 32px;
@@ -14,56 +18,55 @@
     }
 
     &-subtitle {
-        margin-top: 17px;
+        margin-top: 20px;
 
+        color: $secondary3;
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        color: $secondary3;
     }
 
-    &-row {
+    &-wrapper {
         margin-top: 40px;
+        width: 100%;
 
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 12px;
         column-gap: 12px;
     }
 
-    &-img {
-        width: 277px;
-        height: 600px;
-        object-fit: cover;
-    }
-
-    &-grid {
-        margin-top: 44px;
+    &-card {
+        padding: 24px;
+        border-radius: 30px;
+        background-color: $secondary11;
+        border: 2px solid $primary;
         width: 100%;
-        max-width: 1220px;
+        max-width: 418px;
 
-        display: grid;
-        grid-template-columns: 3fr 2fr;
-        grid-row-gap: 20px;
+        display: flex;
+        flex-direction: column;
+
+        color: #fff;
 
         &-title {
+            margin-top: 20px;
+
             font-size: 32px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-            color: #fff;
-            grid-row: 3;
         }
 
-        &-btn {
-            grid-row: 4;
-        }
+        &-desc {
+            margin-top: 20px;
 
-        &-img {
-            grid-column: 2;
-            grid-row-start: 1;
-            grid-row-end: 6;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
         }
-
     }
 }

@@ -7,14 +7,15 @@ const Button = ({
     size = "medium",
     color = "violet",
     onClick,
-    style
+    style,
+    className
 }:TButton) => {
 
-    const classArray = ["button", `${variant}-${color}`, size]
+    const classArray = ["button", `button-${variant}-${color}`, `button-${size}`, className]
 
     return (
         <button
-            className={classArray.join(" button-")}
+            className={classArray.join(" ")}
             onClick={onClick}
             style={style}
         >{children}</button>

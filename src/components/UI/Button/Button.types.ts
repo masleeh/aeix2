@@ -7,4 +7,5 @@ export type TButton = {
     children?: React.ReactNode,
     onClick?: MouseEventHandler<HTMLButtonElement>;
     style?: React.CSSProperties;
+    className?: string;
 }
