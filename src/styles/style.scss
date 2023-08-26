@@ -1,0 +1,11 @@
+@import './reset';
+@import './root';
+
+// Components
+@import '../components/IndexPage/Header/Header.module.scss';
+@import '../components/Common/Navbar/Navbar.module.scss';
+@import '../components/IndexPage/Description/Description.module.scss';
+@import '../components/IndexPage/Pictures/Pictures.module.scss';
+
+// UI
+@import '../components/UI/Button/Button.module.scss';

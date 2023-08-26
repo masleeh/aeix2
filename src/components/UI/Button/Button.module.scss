@@ -1,0 +1,59 @@
+.button {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 100px;
+    @include FlexCenter();
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+
+    // Variant
+    &-contained {
+        border: none;
+
+        &-white {
+            background-color: #fff;
+            color: $primary;
+        }
+
+        &-gray {
+            background-color: $secondary3;
+        }
+
+        &-violet {
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+
+    &-outlined {
+        background-color: none;
+
+        &-white {
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+        &-gray {
+            border: 1px solid $secondary3;
+            color: $secondary3;
+        }
+
+        &-violet {
+            border: 1px solid $primary;
+            color: $primary;
+        }
+    }
+
+    // Margin
+    &-large {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    &-medium {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}

@@ -1,0 +1,46 @@
+
+// COLORS
+
+// Brand colors
+$primary: #3A37C2;
+$secondary1: #182233;
+$secondary2: #B3CEE2;
+$secondary3: #D9DDE7;
+$secondary4: #FD4E5D;
+
+// Gray colors
+$black: #000000;
+$gray1: #1F2937;
+$gray2: #374151;
+$gray3: #4B5563;
+$gray4: #6B7280;
+$gray5: #9CA3AF;
+$gray6: #D1D5DB;
+
+// State colors
+$info: #A0C3FF;
+$success: #76CA66;
+$warning: #FBC756;
+$error: #BA0000;
+
+// MAIN
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background: linear-gradient(180deg, #000 0%, #211759 39.58%, #100F17 100%) no-repeat;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+// Mixins
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

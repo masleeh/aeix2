@@ -1,0 +1,36 @@
+.desc {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-row-gap: 10px;
+
+    &-text {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        color: #fff;
+
+        grid-row-start: span 3;
+    }
+
+    &-block {
+
+        padding: 10px 16px;
+        height: 68px;
+        border-radius: 100px;
+        border: 2px solid $primary;
+        width: fit-content;
+        @include FlexCenter();
+        flex-direction: row;
+        column-gap: 16px;
+        margin-left: auto;
+
+        &-title {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            color: #fff;
+        }
+    }
+}

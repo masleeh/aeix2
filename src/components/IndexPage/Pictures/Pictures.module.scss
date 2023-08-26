@@ -1,0 +1,39 @@
+.pict {
+    margin-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+    }
+
+    &-subtitle {
+        margin-top: 17px;
+
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        color: $secondary3;
+    }
+
+    &-row {
+        margin-top: 40px;
+
+        display: flex;
+        flex-direction: row;
+        column-gap: 12px;
+    }
+
+    &-img {
+        width: 277px;
+        height: 600px;
+        object-fit: cover;
+    }
+}
