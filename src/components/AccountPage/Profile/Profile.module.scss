@@ -1,0 +1,58 @@
+.prof {
+    width: 100%;
+    color: #fff;
+
+    &-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-title {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    &-edit {
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    &-btn {
+        margin-top: 10px;
+    }
+
+    &-box {
+        padding: 24px;
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 30px;
+        border: 2px solid $primary;
+
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-column-gap: 20px;
+
+        &-status {
+            font-size: 20px;
+            font-weight: 500;
+            color: #fff;
+
+            &-span {
+                color: $success;
+            }
+        }
+
+        &-img {
+            border-radius: 12px;
+            pointer-events: none;
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+}

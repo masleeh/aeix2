@@ -45,3 +45,13 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+// Wrapper
+.wrapper {
+    margin-top: 160px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+
+}
