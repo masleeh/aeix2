@@ -1,0 +1,33 @@
+.footer {
+    background-color: $secondary11;
+    padding: 12px 0;
+    padding-bottom: 118px;
+
+    &-stack {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-stack2 {
+        display: flex;
+        flex-direction: row;
+        column-gap: 12px;
+    }
+
+    &-link {
+        font-size: 20px;
+        font-weight: 500;
+        padding: 0 26px;
+        color: #fff;
+
+        &:visited {
+            color: #fff;
+        }
+
+        &:link {
+            color: #fff;
+        }
+    }
+}

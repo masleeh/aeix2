@@ -11,7 +11,6 @@
 
     &-title {
         font-size: 32px;
-        font-style: normal;
         font-weight: 700;
         line-height: normal;
         color: #fff;
@@ -30,6 +29,56 @@
         color: #fff;
 
         
+        &-title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        
+        &-desc {
+            
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+
+            transition: all 0.5s ease;
+
+            &-active {
+                margin-top: 10px;
+                height: auto;
+                opacity: 1;
+            }
+        }
+
+        &-stack {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-icon-cont {
+            width: 24px;
+            height: 21px;
+            @include FlexCenter();
+            transition: all 0.5s ease;
+
+            &-active {
+                transform: rotate(180deg);
+            }
+        }
+        
+    }
+
+    &-wrapper {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        width: 100%;
     }
 
 }
