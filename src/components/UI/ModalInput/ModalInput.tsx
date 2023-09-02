@@ -8,7 +8,8 @@ const ModalInput = ({
     value,
     handleChangeValue,
     placeholder,
-    type
+    type,
+    onKeyEnter
 }:TModalInput) => {
 
     switch (type) {
@@ -17,16 +18,14 @@ const ModalInput = ({
                 <div className='cta-input-wrapper'>
                     <h5 className="cta-input-title">{title}</h5>
                     <PhoneInput 
-                        countries={["US", "CA"]}
+                        countries={["US", "CA", "GE"]}
                         value={value} 
                         onChange={(event) => handleChangeValue(event)}
                         defaultCountry={"US"}
                         className="cta-input"
                         limitMaxLength
                         placeholder={placeholder}
-                        // onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
-                        //     props.handleKey(props.sendData, event)
-                        // }}
+                        onKeyDown={onKeyEnter}
                     />
                 </div>
             )

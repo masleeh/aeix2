@@ -8,17 +8,19 @@ const Button = ({
     color = "violet",
     onClick,
     style,
-    className
+    className,
+    loading
 }:TButton) => {
 
     const classArray = ["button", `button-${variant}-${color}`, `button-${size}`, className]
+    const spinnerArray = ["spinner", `spinner-${variant}-${color}`]
 
     return (
         <button
             className={classArray.join(" ")}
             onClick={onClick}
             style={style}
-        >{children}</button>
+        >{children} {loading && <div className={spinnerArray.join(" ")}></div>}</button>
     )
 }
 

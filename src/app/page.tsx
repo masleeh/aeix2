@@ -6,6 +6,7 @@ import Description from "@/components/IndexPage/Description/Description";
 import FAQ from "@/components/IndexPage/FAQ/FAQ";
 import Features from "@/components/IndexPage/Features/Features";
 import Header from "@/components/IndexPage/Header/Header";
+import AuthModal from "@/components/IndexPage/Modals/AuthModal/AuthModal";
 import CTAModal from "@/components/IndexPage/Modals/CTAModal/CTAModal";
 import Pictures from "@/components/IndexPage/Pictures/Pictures";
 import Plan from "@/components/IndexPage/Plan/Plan";
@@ -18,7 +19,8 @@ export default function Home() {
     isAuthFormShow,
     isCTAFormShow,
     setIsAuthFormShow,
-    setIsCTAFormShow
+    setIsCTAFormShow,
+    setAuth
   } = useContext(GlobalContext)
 
   return (
@@ -33,6 +35,7 @@ export default function Home() {
       <Plan />
       <Footer />
       {isCTAFormShow && <CTAModal setIsCTAFormShow={setIsCTAFormShow} isCTAFormShow={isCTAFormShow}/>}
+      {isAuthFormShow&& <AuthModal setIsAuthFormShow={setIsAuthFormShow} setAuth={setAuth} />}
     </>
   )
 }

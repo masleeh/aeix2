@@ -22,6 +22,12 @@
         font-size: 20px;
     }
 
+    &-error {
+        font-weight: 500;
+        font-size: 20px;
+        color: $error;
+    }
+
     &-input {
         background-color: #fff;
         padding: 12px 16px;
@@ -114,6 +120,28 @@
             font-size: 20px;
             font-weight: 500;
             color: #fff;
+        }
+    }
+
+    &-sublabel {
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        max-width: 240px;
+    }
+
+    &-warn {
+        padding: 24px;
+        border-radius: 25px;
+        border: 2px solid #fff;
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        grid-column-gap: 20px;
+
+        &-img {
+            grid-column: 1;
+            grid-row-start: 1;
+            grid-row-end: 3;
         }
     }
 }

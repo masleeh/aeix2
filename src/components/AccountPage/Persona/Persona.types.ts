@@ -13,3 +13,22 @@ export type TPersonaList = {
     listRoles: TRolesList[];
     selectRoles: (id: number) => void;
 }
+
+type TUserData = {
+    user_name: string;
+    paid_till: string;
+    phone: string;
+    role_id: number;
+}
+
+export type TPersona = {
+    userData: TUserData,
+    auth: string;
+    getUserData: any;
+}
+
+export type TPersonaItem = {
+    title: string;
+    image: StaticImageData;
+    description: string; 
+}

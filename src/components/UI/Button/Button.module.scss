@@ -20,6 +20,7 @@
 
         &-gray {
             background-color: $secondary3;
+            color: $primary;
         }
 
         &-violet {
@@ -56,5 +57,58 @@
     &-medium {
         padding-left: 24px;
         padding-right: 24px;
+    }
+}
+
+
+.spinner {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spinner 0.7s linear infinite;
+
+    &-contained {
+        &-white {
+            border: 2px solid $primary;
+            border-top-color: transparent;
+
+        }
+
+        &-violet {
+            border: 2px solid #fff;
+            border-top-color: transparent;
+        }
+
+        &-gray {
+            border: 2px solid $primary;
+            border-top-color: transparent;
+        }
+    }
+
+    &-outlined {
+        &-white {
+            border: 2px solid #fff;
+            border-top-color: transparent;
+        }
+
+        &-violet {
+            border: 2px solid $secondary3;
+            border-top-color: transparent;
+        }
+
+        &-gray {
+            border: 2px solid $primary;
+            border-top-color: transparent;
+        }
+    }
+}
+
+  @keyframes spinner {
+    from {
+    }
+    to {
+      transform: rotate(360deg);
     }
 }

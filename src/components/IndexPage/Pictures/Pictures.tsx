@@ -4,8 +4,14 @@ import React from 'react'
 import Chat1Pict from '@/assets/images/chat1.png'
 import Chat2Pict from '@/assets/images/chat2.png'
 import PictIcons from "@/assets/images/pict-icons.png"
+import useOpenModal from '@/hooks/useOpenModal'
 
 const Pictures = () => {
+    
+    const {
+        openCTAModal
+    } = useOpenModal()
+
     return (
         <section className='pict container'>
             <h2 className="pict-title">One service for all yours projects</h2>
@@ -18,7 +24,7 @@ const Pictures = () => {
 
             <div className="pict-grid">
                 <h2 className="pict-grid-title">Integrates with your work prosecces</h2>
-                <Button size="large" variant="contained" color="violet" className='pict-grid-btn'>Get Started</Button>
+                <Button onClick={openCTAModal} size="large" variant="contained" color="violet" className='pict-grid-btn'>Get Started</Button>
 
                 <Image src={PictIcons} alt="" className='pict-grid-img'/>
             </div>

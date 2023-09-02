@@ -14,6 +14,7 @@ const PersonaList = ({
                 <div className={item.isSelected? "pers-list-item pers-list-item-selected" : "pers-list-item"} key={index} onClick={() => selectRoles(item.id)}>
                     <Image src={item.image} alt="" className="pers-list-item-img"/>
                     <h4 className="pers-list-item-title">{item.title}</h4>
+                    {item.isSelected && <p className='pers-act-desc'>{item.description}</p>}
                 </div>
             ))}
         </React.Fragment>

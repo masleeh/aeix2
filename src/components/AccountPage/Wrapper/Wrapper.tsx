@@ -1,12 +1,26 @@
-import React from 'react'
+"use client"
+
+import React, { useContext } from 'react'
 import Profile from '../Profile/Profile'
 import Persona from '../Persona/Persona'
+import { GlobalContext } from '@/context/GlobalContext'
+import useWrapper from './Wrapper.utils'
 
 const Wrapper = () => {
+    const {
+        auth,
+        getUserData,
+        setAuth
+    } = useContext(GlobalContext)
+
+    const {
+        userData,
+    } = useWrapper(auth)
+
     return (
         <div className='wrapper container'>
-            <Profile />
-            <Persona />
+            <Profile userData={userData} auth={auth} setAuth={setAuth}/>
+            <Persona userData={userData} auth={auth} getUserData={getUserData}/>
         </div>
     )
 }

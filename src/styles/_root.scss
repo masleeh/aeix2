@@ -22,7 +22,7 @@ $gray6: #D1D5DB;
 $info: #A0C3FF;
 $success: #76CA66;
 $warning: #FBC756;
-$error: #BA0000;
+$error: #ff5858;
 
 // MAIN
 
@@ -77,22 +77,5 @@ body {
         &:hover {
             color: #fff;
         }
-    }
-}
-
-.spinner {
-    margin-left: 5px;
-    width: 20px;
-    height: 20px;
-    border: 7px solid #fff;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: spinner 0.7s linear infinite;
-  }
-  @keyframes spinner {
-    from {
-    }
-    to {
-      transform: rotate(360deg);
     }
 }

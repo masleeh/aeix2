@@ -1,5 +1,6 @@
 "use client"
 
+import axios from "axios";
 import { Dispatch, SetStateAction, useCallback, useEffect, useState } from "react";
 
 
@@ -28,10 +29,31 @@ const useCTAModal = (setIsCTAFormShow: Dispatch<SetStateAction<boolean>>) => {
         } 
     }, [])
 
-    const handleSendUserData = () => {
+    const handleSendUserData = async () => {
+        setError("")
         setLoading(true)
-        console.log(phone)
-        if (!name || !phone || !agree || name.length > 60 || phone.length < 12) return setError("Please, provide correct data")
+        if (!name || !phone || phone.length < 12) {
+            setLoading(false)
+            return setError("Please input both your name and phone number")
+        }
+        if (!agree) {
+            setLoading(false)
+            return setError("Please reach an agreement before making a purchase.")
+        }
+        try {
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/create-checkout-session`, {
+                user_name: name,
+                user_phone: phone,
+                user_email: ""
+            })
+            setLoading(false)
+            window.location = response.data.url
+        } catch (error) {
+            if (axios.isAxiosError(error)) {
+                console.log(error.message)
+            }
+            setLoading(false)
+        }
     }
 
     return {
@@ -40,6 +62,8 @@ const useCTAModal = (setIsCTAFormShow: Dispatch<SetStateAction<boolean>>) => {
         phone,
         handleChangePhone,
         agree,
+        error,
+        loading,
         handleChangeAgree,
         handleCloseForm,
         handleSendUserData

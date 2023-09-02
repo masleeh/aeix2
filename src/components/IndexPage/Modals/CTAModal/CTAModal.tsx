@@ -18,8 +18,10 @@ const CTAModal = ({
         handleChangePhone,
         agree,
         handleChangeAgree,
+        error,
         handleCloseForm,
-        handleSendUserData
+        handleSendUserData,
+        loading
     } = useCTAModal(setIsCTAFormShow)
 
     return (
@@ -48,7 +50,15 @@ const CTAModal = ({
                     <label htmlFor='cta_checkbox' className='cta-check-label'>I agree to the terms of privacy</label>
                 </div>
 
-                <Button variant="contained" color="white" size="large" onClick={handleSendUserData}>Pay</Button>
+                {error && <p className="cta-error">{error}</p>}
+
+                <Button 
+                    variant="contained" 
+                    color="white" 
+                    size="large" 
+                    onClick={handleSendUserData}
+                    loading={loading}    
+                >Pay</Button>
             </div>
         </ModalWrapper>
     )

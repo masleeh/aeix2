@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className={navTop > 1 ? "navbar-wrapper navbar-wrapper-boxed" :"navbar-wrapper"}>
                 <div className={`${inter.className} navbar-title`} onClick={goToHome}>AEIX</div>
 
-                <Button size="medium" variant="contained" color="white">Get Started</Button>
+                <Button onClick={openAuthModal} size="medium" variant="outlined" color="white">Log in</Button>
             </div>
         </nav>
     )

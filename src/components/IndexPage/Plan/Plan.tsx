@@ -1,8 +1,14 @@
 import React from 'react'
 import PlanElement from './Elements/PlanElement'
 import Button from '@/components/UI/Button/Button'
+import useOpenModal from '@/hooks/useOpenModal'
 
 const Plan = () => {
+          
+    const {
+        openCTAModal
+    } = useOpenModal()
+
     return (
         <section className='plan'>
             <h3 className='plan-title'>Plan</h3>
@@ -21,7 +27,7 @@ const Plan = () => {
                     <PlanElement title="User privacy and data security" />
                 </div>
 
-                <Button variant="contained" color="violet" size="large" className='plan-box-btn'>Get Started</Button>
+                <Button onClick={openCTAModal} variant="contained" color="violet" size="large" className='plan-box-btn'>Get Started</Button>
             </div>
         </section>
     )

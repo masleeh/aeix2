@@ -4,4 +4,5 @@ export type TModalInput = {
     value: string;
     handleChangeValue: (event: any) => void;
     type: "text" | "phone";
+    onKeyEnter?: any;
 }

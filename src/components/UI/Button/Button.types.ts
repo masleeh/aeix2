@@ -8,4 +8,5 @@ export type TButton = {
     onClick?: MouseEventHandler<HTMLButtonElement>;
     style?: React.CSSProperties;
     className?: string;
+    loading?: boolean;
 }

@@ -3,15 +3,20 @@
 import React from 'react'
 import { roles } from '@/assets/data/roles'
 import Image from 'next/image'
+import { TPersonaItem } from '../../Persona.types'
 
-const PersonaItem = () => {
+const PersonaItem = ({
+    title,
+    description,
+    image
+}: TPersonaItem) => {
     
 
     return (
         <div className='pers-act'>
-            {/* <Image src={} alt="" className='pers-act-img'/> */}
-            <h4 className="pers-act-title">{}</h4>
-            <p className='pers-act-desc'>{}</p>
+            <Image src={image} alt="" className='pers-act-img'/>
+            <h4 className="pers-act-title">{title}</h4>
+            <p className='pers-act-desc'>{description}</p>
         </div>
     )
 }
