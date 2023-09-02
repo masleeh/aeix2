@@ -1,6 +1,7 @@
 import '../styles/style.scss'
 import type { Metadata } from 'next'
 import { montserrat } from './fonts'
+import GlobalContextProvider from '@/context/GlobalContext'
 
 export const metadata: Metadata = {
   title: 'AEIX',
@@ -14,7 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <GlobalContextProvider>
+          {children}
+        </GlobalContextProvider>
+      </body>
     </html>
   )
 }

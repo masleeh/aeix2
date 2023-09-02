@@ -1,4 +1,5 @@
 .navbar {
+    z-index: 2;
     display: block;
     width: 100vw;
     position: fixed;
@@ -17,6 +18,12 @@
 
         margin-left: auto;
         margin-right: auto;
+
+        transition: background-color 1s ease;
+
+        &-boxed {
+            background-color: $secondary11;
+        }
     }
 
     &-title {
@@ -27,5 +34,6 @@
         line-height: normal;
         text-transform: uppercase;
         color: $info;
+        cursor: pointer;
     }
 }

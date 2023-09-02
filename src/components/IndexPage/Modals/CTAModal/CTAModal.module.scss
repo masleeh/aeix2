@@ -1,0 +1,119 @@
+.cta {
+    padding: 24px;
+    border-radius: 30px;
+    background-color: $primary;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    width: 100%;
+    max-width: 500px;
+
+    &-title {
+        color: #FFF;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    &-desc {
+        color: #FFF;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    &-input {
+        background-color: #fff;
+        padding: 12px 16px;
+        font-weight: 500;
+        font-size: 16px;
+        height: 44px;
+        width: 100%;
+        border-radius: 7px;
+        border: 1px solid $gray5;
+        
+        &-title {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+        }
+    }
+
+    &-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &-box {
+        border-radius: 25px;
+        border: 2px solid #fff;
+        padding: 24px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+
+        &-title {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        &-date {
+            font-size: 20px;
+            font-weight: 500;
+            color: $info;
+        }
+
+        &-list {
+            margin-left: 24px;
+            display: flex;
+            flex-direction: column;
+
+            &-title {
+                font-size: 16px;
+                font-weight: 700;
+                color: #fff;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 100%;
+                    background-color: #fff;
+                    top: 6px;
+                    left: -17px;
+                }
+            }
+        }
+    }
+
+    &-check {
+        width: 25px;
+        height: 25px;
+
+        &-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 8px;
+        }
+
+        &-label {
+            font-size: 20px;
+            font-weight: 500;
+            color: #fff;
+        }
+    }
+}

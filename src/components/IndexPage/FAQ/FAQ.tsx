@@ -9,7 +9,7 @@ const FAQ = () => {
 
             <div className="faq-wrapper">
                 {faq.map((item, index) => (
-                    <FAQElement title={item.title} description={item.description} />
+                    <FAQElement key={index} title={item.title} description={item.description} />
                 ))}
             </div>
         </section>
