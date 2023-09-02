@@ -73,9 +73,32 @@ body {
         right: 10px;
         top: 10px;
         cursor: pointer;
+        z-index: 6;
 
         &:hover {
             color: #fff;
         }
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .wrapper {
+        margin-top: 120px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 48px;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal {
+        background: $primary;
     }
 }

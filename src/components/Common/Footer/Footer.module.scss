@@ -31,3 +31,31 @@
         }
     }
 }
+
+@media (max-width: 750px) {
+    .footer {
+        padding-bottom: 20px;
+        &-stack {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+        }
+
+        &-stack2 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 8px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        &-btn {
+            width: 100%;
+        }
+    }
+}

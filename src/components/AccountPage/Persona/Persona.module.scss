@@ -86,3 +86,43 @@
         margin-bottom: 80px;
     }
 }
+
+@media (max-width: 600px) {
+    .pers {
+        &-title {
+            font-size: 20px;
+        }
+
+        &-btn {
+            width: 100%;
+        }
+
+        &-box {
+            padding: 16px;
+        }
+
+        &-act {
+            padding: 16px;
+            grid-template-columns: 80px 1fr;
+            grid-row-gap: 8px;
+            grid-column-gap: 12px;
+
+            &-title {
+                font-size: 20px;
+            }
+        }
+
+        &-list {
+            &-item {
+                padding: 16px;
+                grid-template-columns: 80px 1fr;
+                grid-row-gap: 8px;
+                grid-column-gap: 12px;
+
+                &-title {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

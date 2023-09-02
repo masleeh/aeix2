@@ -44,7 +44,6 @@ const useAuthModal = (setIsAuthFormShow: Dispatch<SetStateAction<boolean>>, setA
                     user_phone: phone
                 })
                 setRespCode(response.data.sms_code)
-                console.log(response.data.sms_code)
                 setLoading(false)
                 setIsShowCode(true)
             } catch (error) {
@@ -64,6 +63,7 @@ const useAuthModal = (setIsAuthFormShow: Dispatch<SetStateAction<boolean>>, setA
                 Cookie.set('aeix_phone', phone, { expires: 20} )
                 setAuth(phone)
                 router.push('/account')
+                setIsAuthFormShow(false)
             } else {
                 setError("SMS code doesn't match")
             }
@@ -79,6 +79,8 @@ const useAuthModal = (setIsAuthFormShow: Dispatch<SetStateAction<boolean>>, setA
     const handleSendNumberOnEnter = (event: any) => handleKey(sendNumber, event)
     const handleSendCodeOnEnter = (event: any) => handleKey(sendCode, event)
 
+    const handleCloseModal = () => setIsAuthFormShow(false)
+
     return {
         phone,
         handleChangePhone,
@@ -90,7 +92,8 @@ const useAuthModal = (setIsAuthFormShow: Dispatch<SetStateAction<boolean>>, setA
         sendNumber,
         sendCode,
         handleSendNumberOnEnter,
-        handleSendCodeOnEnter
+        handleSendCodeOnEnter,
+        handleCloseModal
     }
 }
 

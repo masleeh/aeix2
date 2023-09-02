@@ -48,3 +48,23 @@
         margin-bottom: 40px;
     }
 }
+
+@media (max-width: 600px) {
+    .header {
+        &-title {
+            margin-top: 190px;
+            font-size: 32px;
+        }
+
+        &-subtitle {
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        &-btn {
+            margin-top: 59px;
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+}

@@ -4,7 +4,7 @@ import FAQElement from './Elements/FAQElement'
 
 const FAQ = () => {
     return (
-        <section className='faq'>
+        <section className='faq container'>
             <h3 className="faq-title">FAQ</h3>
 
             <div className="faq-wrapper">

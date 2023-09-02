@@ -21,11 +21,12 @@ const AuthModal = ({
         sendNumber,
         sendCode,
         handleSendCodeOnEnter,
-        handleSendNumberOnEnter
+        handleSendNumberOnEnter,
+        handleCloseModal
     } = useAuthModal(setIsAuthFormShow, setAuth)
 
     return (
-        <ModalWrapper onClose={setIsAuthFormShow}>
+        <ModalWrapper onClose={handleCloseModal}>
             <div className="cta">
                 <h2 className="cta-title">Hello! Sing in</h2>
                 <ModalInput 
@@ -56,7 +57,7 @@ const AuthModal = ({
                             handleChangeValue={handleChangeCode}
                             onKeyEnter={handleSendCodeOnEnter}
                         />
-                        <Button onClick={sendCode} variant='contained' color="white" size="large" loading={loading}>Verify</Button>
+                        <Button className="cta-btn" onClick={sendCode} variant='contained' color="white" size="large" loading={loading}>Verify</Button>
                     </React.Fragment>
                 )}
             </div>

@@ -56,6 +56,20 @@ const useCTAModal = (setIsCTAFormShow: Dispatch<SetStateAction<boolean>>) => {
         }
     }
 
+    const formatDate = (timestamp:any) => {
+        const months = [
+            "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+          ];
+          
+          const date = new Date(timestamp);
+          const month = months[date.getMonth()];
+          const day = date.getDate();
+          const year = date.getFullYear();
+        
+          return `${month}, ${day.toString().padStart(2, '0')}, ${year}`;
+    }
+
     return {
         name,
         handleChangeName,
@@ -66,7 +80,8 @@ const useCTAModal = (setIsCTAFormShow: Dispatch<SetStateAction<boolean>>) => {
         loading,
         handleChangeAgree,
         handleCloseForm,
-        handleSendUserData
+        handleSendUserData,
+        formatDate
     }
 }
 

@@ -1,7 +1,8 @@
 "use client"
 
 import useFormModal from '@/hooks/useFormModal'
-import React, { PropsWithChildren, createContext, useState } from 'react'
+import Cookies from 'js-cookie'
+import React, { PropsWithChildren, createContext, useEffect, useState } from 'react'
 
 export const GlobalContext = createContext<any>(null)
 
@@ -10,6 +11,19 @@ const GlobalContextProvider:React.FC<PropsWithChildren> = ({children}) => {
     const [isLoading, setIsLoading] = useState(false)
     const [errorMessage, setErrorMessage] = useState("")
 
+    const getCookies = () => {
+        const cookie = Cookies.get('aeix_phone')
+        if (cookie) {
+            setAuth(cookie)
+        }
+        else {
+            setAuth('')
+        }
+    }
+
+    useEffect(() => {
+        getCookies()
+    }, [])
     
     const {
         isAuthFormShow,

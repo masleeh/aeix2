@@ -9,8 +9,10 @@ const FeatureCard = ({
 }: TFeatureCard) => {
     return (
         <div className='feat-card'>
-            <Image src={icon} alt="" className='feat-card-icon'/>
-            <h4 className="feat-card-title">{title}</h4>
+            <div className='feat-row'>
+                <Image src={icon} alt="" className='feat-card-icon'/>
+                <h4 className="feat-card-title">{title}</h4>
+            </div>
             <p className="feat-card-desc">{description}</p>
         </div>
     )

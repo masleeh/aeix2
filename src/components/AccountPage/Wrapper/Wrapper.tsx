@@ -9,12 +9,12 @@ import useWrapper from './Wrapper.utils'
 const Wrapper = () => {
     const {
         auth,
-        getUserData,
         setAuth
     } = useContext(GlobalContext)
 
     const {
         userData,
+        getUserData
     } = useWrapper(auth)
 
     return (

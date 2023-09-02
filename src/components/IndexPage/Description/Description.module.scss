@@ -34,3 +34,19 @@
         }
     }
 }
+
+@media (max-width: 800px) {
+    .desc {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        
+        &-block {
+            width: 100%;
+
+            &-title {
+                font-size: 16px;
+            }
+        }
+    }
+}

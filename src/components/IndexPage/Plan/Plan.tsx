@@ -10,7 +10,7 @@ const Plan = () => {
     } = useOpenModal()
 
     return (
-        <section className='plan'>
+        <section className='plan container'>
             <h3 className='plan-title'>Plan</h3>
 
             <div className="plan-box">

@@ -56,3 +56,24 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .prof {
+        
+        &-title {
+            font-size: 20px;
+        }
+        
+        &-btn {
+            width: 100%;
+        }
+
+        &-box {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+        }
+
+    }
+}

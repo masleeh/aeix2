@@ -58,3 +58,32 @@
 
     }
 }
+
+@media (max-width: 600px) {
+    .plan {
+        margin-top: 49px;
+
+        &-title {
+            font-size: 20px;
+        }
+
+        &-box {
+            margin-top: 20px;
+
+            &-title {
+                font-size: 60px;
+            }
+
+            &-grid {
+                margin-top: 24px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 8px;
+            }
+
+            &-btn {
+                width: 100%;
+            }
+        }
+    }
+}

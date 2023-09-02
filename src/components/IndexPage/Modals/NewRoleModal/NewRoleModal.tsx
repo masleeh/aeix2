@@ -14,7 +14,7 @@ const NewRoleModal = ({handleCloseModal, data}: {handleCloseModal: any, data: an
                     <h4 className="pers-act-title">{data.title}</h4>
                     <p className='pers-act-desc'>{data.description}</p>
                 </div>
-                <Button variant='contained' size="medium" color="white" onClick={handleCloseModal}>Back to main page</Button>
+                <Button className='cta-btn' variant='contained' size="medium" color="white" onClick={handleCloseModal}>Back to main page</Button>
             </div>
         </ModalWrapper>
     )

@@ -2,16 +2,22 @@
 
 import { inter } from '@/app/fonts'
 import Button from '@/components/UI/Button/Button'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react'
 import useNavBar from './Navbar.utils'
 import useOpenModal from '@/hooks/useOpenModal'
+import { GlobalContext } from '@/context/GlobalContext'
 
 const Navbar = () => {
 
+    const {auth, setAuth} = useContext(GlobalContext)
+
     const {
         navTop,
-        goToHome
-    } = useNavBar()
+        goToHome,
+        goToAccount,
+        pathname,
+        logOut
+    } = useNavBar(setAuth)
 
     const {
         openAuthModal
@@ -22,7 +28,15 @@ const Navbar = () => {
             <div className={navTop > 1 ? "navbar-wrapper navbar-wrapper-boxed" :"navbar-wrapper"}>
                 <div className={`${inter.className} navbar-title`} onClick={goToHome}>AEIX</div>
 
-                <Button onClick={openAuthModal} size="medium" variant="outlined" color="white">Log in</Button>
+                {auth ? (
+                    pathname === "/account" ? (
+                        <Button onClick={logOut} size="medium" variant="outlined" color="white">Log out</Button>
+                    ) : (
+                        <Button onClick={goToAccount} size="medium" variant="contained" color="white">Account</Button>
+                    )
+                ) : (
+                    <Button onClick={openAuthModal} size="medium" variant="outlined" color="white">Log in</Button>
+                )}
             </div>
         </nav>
     )

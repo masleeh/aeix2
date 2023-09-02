@@ -16,8 +16,8 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-stack2">
-                        <Button variant='outlined' color="white">Login</Button>
-                        <Button variant="contained" color="white">Get Started</Button>
+                        <Button variant='outlined' color="white" className='footer-btn'>Login</Button>
+                        <Button variant="contained" color="white" className='footer-btn'>Get Started</Button>
                     </div>
                 </div>
             </div>

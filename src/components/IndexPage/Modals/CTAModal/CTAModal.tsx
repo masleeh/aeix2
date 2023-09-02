@@ -5,6 +5,7 @@ import useCTAModal from './CTAModal.utils'
 import { TCTAModal } from './CTAModal.types'
 import Button from '@/components/UI/Button/Button'
 import CTABox from './Elements/CTABox'
+import Link from 'next/link'
 
 
 const CTAModal = ({
@@ -21,7 +22,8 @@ const CTAModal = ({
         error,
         handleCloseForm,
         handleSendUserData,
-        loading
+        loading,
+        formatDate
     } = useCTAModal(setIsCTAFormShow)
 
     return (
@@ -43,11 +45,12 @@ const CTAModal = ({
                     value={phone}
                     handleChangeValue={handleChangePhone}
                 />
-                <CTABox />
+                <CTABox formatDate={formatDate}/>
 
                 <div className='cta-check-row'>
                     <input type="checkbox" id="cta_checkbox" className='cta-check' checked={agree ? true : false} onChange={handleChangeAgree}/>
-                    <label htmlFor='cta_checkbox' className='cta-check-label'>I agree to the terms of privacy</label>
+                    <label htmlFor='cta_checkbox' className='cta-check-label'>I agree to the &nbsp; 
+                        <Link href="user_agreement.pdf" locale='/public/user_agreement.pdf' target="_blank" className='cta-terms'>terms of privacy</Link></label>
                 </div>
 
                 {error && <p className="cta-error">{error}</p>}
@@ -58,6 +61,7 @@ const CTAModal = ({
                     size="large" 
                     onClick={handleSendUserData}
                     loading={loading}    
+                    className='cta-btn'
                 >Pay</Button>
             </div>
         </ModalWrapper>

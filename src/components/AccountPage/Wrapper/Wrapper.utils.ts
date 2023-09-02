@@ -29,7 +29,6 @@ const useWrapper = (auth: string) => {
 
     const formattedDate = (rawDate: string) => {
         const date = new Date(Date.parse(rawDate.replace(" ", "T")))
-        console.log(date)
         const outputDate = date.toLocaleDateString('en-Us', {month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric',
                     minute: 'numeric'}).replace(',', "")
         return outputDate
