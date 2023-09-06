@@ -5,7 +5,8 @@ import React from 'react'
 const Header = () => {
 
     const {
-        openCTAModal
+        openCTAModal,
+        openAuthModal
     } = useOpenModal()
 
     return (
@@ -15,7 +16,10 @@ const Header = () => {
                 <h1 className='header-title'>Experience the power of AI</h1>
                 <h2 className='header-subtitle'>with the Text to AI chat app AEIX!</h2>
 
-                <Button onClick={openCTAModal} size="large" variant="contained" color="white" className='header-btn'>Get Started</Button>
+                <div className="header-row">
+                    <Button onClick={openCTAModal} size="large" variant="contained" color="white">Sign up</Button>
+                    <Button onClick={openAuthModal} size="large" variant="outlined" color="white">Log in</Button>
+                </div>
             </div>
         </header>
     )

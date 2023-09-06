@@ -20,7 +20,7 @@ const Roles = () => {
                 ))}
             </div>
 
-            <Button onClick={openCTAModal} variant="contained" color="violet" size="large" className='roles-btn'>Get Started</Button>
+            <Button onClick={openCTAModal} variant="contained" color="violet" size="large" className='roles-btn'>Sign up</Button>
 
         </section>
     )

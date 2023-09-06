@@ -1,0 +1,6 @@
+{
+    "npm.enableRunFromFolder": false,
+    "editor.suggest.showFolders": true,
+    "explorer.fileNesting.enabled": false,
+    "editor.stickyScroll.enabled": false
+}

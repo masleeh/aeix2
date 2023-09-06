@@ -19,7 +19,7 @@ const Features = () => {
                     {features.map((item, index) => <FeatureCard key={index} title={item.title} description={item.description} icon={item.icon}/>)}
                 </div>
 
-                <Button onClick={openCTAModal} variant="contained" color="violet" size="large" className='feat-btn'>Get Started</Button>
+                <Button onClick={openCTAModal} variant="contained" color="violet" size="large" className='feat-btn'>Sign up</Button>
 
             </section>
 
@@ -33,7 +33,7 @@ const Features = () => {
                     {features2.map((item, index) => <FeatureCard key={index} title={item.title} description={item.description} icon={item.icon}/>)}
                 </div>
 
-                <Button onClick={openCTAModal} variant="contained" color="violet" size="large" className='feat-btn'>Get Started</Button>
+                <Button onClick={openCTAModal} variant="contained" color="violet" size="large" className='feat-btn'>Sign up</Button>
 
             </section>
         </>

@@ -24,7 +24,7 @@ const Pictures = () => {
 
             <div className="pict-grid">
                 <h2 className="pict-grid-title">Integrates with your work prosecces</h2>
-                <Button onClick={openCTAModal} size="large" variant="contained" color="violet" className='pict-grid-btn'>Get Started</Button>
+                <Button onClick={openCTAModal} size="large" variant="contained" color="violet" className='pict-grid-btn'>Sign up</Button>
 
                 <Image src={PictIcons} alt="" className='pict-grid-img'/>
             </div>

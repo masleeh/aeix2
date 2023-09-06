@@ -27,7 +27,7 @@ const Plan = () => {
                     <PlanElement title="User privacy and data security" />
                 </div>
 
-                <Button onClick={openCTAModal} variant="contained" color="violet" size="large" className='plan-box-btn'>Get Started</Button>
+                <Button onClick={openCTAModal} variant="contained" color="violet" size="large" className='plan-box-btn'>Sign up</Button>
             </div>
         </section>
     )

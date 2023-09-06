@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import xIcon from '@/assets/icons/x.svg'
 import Image from 'next/image'
 import { motion } from 'framer-motion';

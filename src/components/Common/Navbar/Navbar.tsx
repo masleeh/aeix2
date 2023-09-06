@@ -20,7 +20,8 @@ const Navbar = () => {
     } = useNavBar(setAuth)
 
     const {
-        openAuthModal
+        openAuthModal,
+        openCTAModal
     } = useOpenModal()
 
     return (
@@ -35,7 +36,10 @@ const Navbar = () => {
                         <Button onClick={goToAccount} size="medium" variant="contained" color="white">Account</Button>
                     )
                 ) : (
-                    <Button onClick={openAuthModal} size="medium" variant="outlined" color="white">Log in</Button>
+                    <div className='navbar-row'>
+                        <Button onClick={openAuthModal} size="medium" variant="outlined" color="white">Log in</Button>
+                        <Button onClick={openCTAModal} size="medium" variant="contained" color="white">Sign up</Button>
+                    </div>
                 )}
             </div>
         </nav>
