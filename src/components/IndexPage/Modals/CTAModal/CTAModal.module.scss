@@ -145,8 +145,17 @@
         }
     }
 
+    a:link, a:visited {
+        text-decoration: underline;
+    }
+
     &-terms {
         color: $gray3;
+        text-decoration: underline;
+
+        &:visited {
+            text-decoration: underline;
+        }
     }
 }
 

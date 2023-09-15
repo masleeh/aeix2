@@ -12,7 +12,7 @@ const Features = () => {
 
     return (
         <>
-            <section className='feat container'>
+            <section className='feat container' id="features">
                 <h3 className="feat-title">Features</h3>
 
                 <div className="feat-wrapper">
