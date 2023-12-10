@@ -36,7 +36,10 @@ const Profile = ({
                     {/* <ProfText title="Email" text={userData.} /> */}
                     <ProfText title="Expiring date" text={userData.paid_till}/>
 
-                    <h4 className='prof-box-status'>Subscription status: <span className='prof-box-status-span'>Active</span></h4>
+                    <h4 className='prof-box-status'>Subscription status: <span 
+                            className='prof-box-status-span' 
+                            style={{color: userData.status === "Active" ? "#76CA66" : "orange"}}
+                        >{userData.status}</span></h4>
                 </div>
             </div>
 

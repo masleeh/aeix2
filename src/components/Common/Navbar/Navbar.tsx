@@ -37,8 +37,8 @@ const Navbar = () => {
                     )
                 ) : (
                     <div className='navbar-row'>
-                        <Button onClick={openAuthModal} size="medium" variant="outlined" color="white">Log in</Button>
                         <Button onClick={openCTAModal} size="medium" variant="contained" color="white">Sign up</Button>
+                        <Button onClick={openAuthModal} size="medium" variant="outlined" color="white">Log in</Button>
                     </div>
                 )}
             </div>

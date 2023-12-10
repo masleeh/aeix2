@@ -23,8 +23,8 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-stack2">
-                        <Button variant='outlined' color="white" className='footer-btn' onClick={openAuthModal}>Log in</Button>
                         <Button variant="contained" color="white" className='footer-btn'onClick={openCTAModal}>Sign up</Button>
+                        <Button variant='outlined' color="white" className='footer-btn' onClick={openAuthModal}>Log in</Button>
                     </div>
                 </div>
             </div>

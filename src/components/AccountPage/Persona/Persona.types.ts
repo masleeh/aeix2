@@ -19,6 +19,7 @@ type TUserData = {
     paid_till: string;
     phone: string;
     role_id: number;
+    status?: string;
 }
 
 export type TPersona = {

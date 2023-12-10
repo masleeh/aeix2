@@ -11,7 +11,8 @@ const useWrapper = (auth: string) => {
         user_name: "",
         paid_till: "",
         phone: auth,
-        role_id: 1
+        role_id: 1,
+        status: "Active"
     })
 
     const formattedNumber = (rawPhone: string) => {
@@ -34,6 +35,16 @@ const useWrapper = (auth: string) => {
         return outputDate
     }
 
+    const getStatus = (rawDate: string) => {
+        const date = new Date(Date.parse(rawDate.replace(" ", "T")))
+        const timestamp = date.getTime()
+        if (timestamp > Date.now()) {
+            return "Active"
+        } else {
+            return "Expired"
+        }
+    }
+
     const getUserData = async () => {
         try {
             const trimmedAuth = auth.replace(/(\D+)/g, '')
@@ -42,7 +53,8 @@ const useWrapper = (auth: string) => {
                 user_name: response.data.user_name,
                 paid_till: formattedDate(response.data.paid_till),
                 phone: formattedNumber(userData.phone),
-                role_id: response.data.role_id
+                role_id: response.data.role_id,
+                status: getStatus(response.data.paid_till)
             })
         } catch (error: any) {
             console.log(error.message)
